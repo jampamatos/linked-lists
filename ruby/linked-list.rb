@@ -1,13 +1,6 @@
-class Node
-	attr_accessor :value, :next_node
-	
-	def initialize(value, next_node = nil)
-	  @value = value
-	  @next_node = next_node
-	end
-  end
-	
-  class LinkedList
+require_relative 'node'
+
+class LinkedList
 	def initialize(value = nil)
 	  @head_node = Node.new(value)
 	end
@@ -87,28 +80,4 @@ class Node
 	  node1.next_node = node2.next_node
 	  node2.next_node = temp
 	end
-  end
-  
-  ll = LinkedList.new
-  ll.insert_beginning(1)
-  ll.insert_beginning(2)
-  ll.insert_beginning(3)
-  ll.insert_beginning(4)
-  puts "Lista Original:"
-  puts ll.stringify_list
-  
-  ll.swap_node(3, 1)
-  puts "Lista Após Trocar 3 e 1:"
-  puts ll.stringify_list
-  
-  ll.swap_node(2, 4)
-  puts "Lista Após Trocar 2 e 4:"
-  puts ll.stringify_list
-  
-  ll.swap_node(4, 4)
-  puts "Tentativa de Trocar 4 e 4 (não deve ocorrer troca):"
-  puts ll.stringify_list
-  
-  ll.swap_node(5, 6)
-  puts "Tentativa de Trocar 5 e 6 (não presentes na lista):"
-  puts ll.stringify_list  
+end

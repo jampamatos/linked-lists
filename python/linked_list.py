@@ -1,16 +1,4 @@
-class Node:
-    def __init__(self, value, next_node=None):
-        self.value = value
-        self.next_node = next_node
-    
-    def get_value(self):
-        return self.value
-    
-    def get_next_node(self):
-        return self.next_node
-    
-    def set_next_node(self, next_node):
-        self.next_node = next_node
+from node import Node
 
 class LinkedList:
     def __init__(self, value=None):
@@ -85,28 +73,3 @@ class LinkedList:
         temp = node1.get_next_node()
         node1.set_next_node(node2.get_next_node())
         node2.set_next_node(temp)
-
-
-ll = LinkedList()
-ll.insert_beginning(1)
-ll.insert_beginning(2)
-ll.insert_beginning(3)
-ll.insert_beginning(4)
-print("Lista Original:")
-print(ll.stringify_list())
-
-ll.swap_node(3, 1)
-print("Lista Após Trocar 3 e 1:")
-print(ll.stringify_list())
-
-ll.swap_node(2, 4)
-print("Lista Após Trocar 2 e 4:")
-print(ll.stringify_list())
-
-ll.swap_node(4, 4)
-print("Tentativa de Trocar 4 e 4 (não deve ocorrer troca):")
-print(ll.stringify_list())
-
-ll.swap_node(5, 6)
-print("Tentativa de Trocar 5 e 6 (não presentes na lista):")
-print(ll.stringify_list())
