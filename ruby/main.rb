@@ -1,4 +1,5 @@
-require_relative 'linked-list'
+require_relative 'linked_list'
+require_relative 'doubly_list'
 
 ll = LinkedList.new
 ll.insert_beginning(1)

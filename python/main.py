@@ -1,4 +1,5 @@
 from linked_list import LinkedList
+from doubly_list import DoublyLinkedList
 
 ll = LinkedList()
 ll.insert_beginning(1)
